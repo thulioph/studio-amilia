@@ -1,9 +1,0 @@
-- Grid de 12 colunas: 960px;
-margin: 0px 10px;
-width: 60px;
-
-
-clear:both; (não deixa nenhum elemento flutuar em cima dele)
-rel="canonical"
-background-size: cover;
-background-size: redimenciona o background;
