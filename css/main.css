@@ -2,24 +2,24 @@
    RESET
    ========================================================================== */
 
-/*html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{
-border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-body{line-height:1}
-ul{list-style:none}
-blockquote,q{quotes:none}
-blockquote:before,blockquote:after,q:before,q:after{content:none}
-table{border-collapse:collapse;border-spacing:0}*/
+	html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{
+	border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}
+	article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+	body{line-height:1}
+	ul{list-style:none}
+	blockquote,q{quotes:none}
+	blockquote:before,blockquote:after,q:before,q:after{content:none}
+	table{border-collapse:collapse;border-spacing:0}
 
 /* ==========================================================================
    GERAL
    ========================================================================== */
 
-    /*font-family: 'Open Sans', sans-serif;*/
-
     body{
    	 background: url(../imagens/bg01.jpg) no-repeat;
    	 background-size: cover;
+   	 font-family: 'Open Sans', sans-serif;
+   	 font-size: 10px;
     }
 
 	.all{
@@ -29,15 +29,17 @@ table{border-collapse:collapse;border-spacing:0}*/
 	}
 
 	header{
-		background: pink;
+		height: 220px;
+		/*background: pink;*/
 	}
 
 	#main{
-		background: orange;
+		/*background: orange;*/
 	}
 
 	footer{
-		background: green;
+		height: 220px;
+		/*background: green;*/
 	}
 
 	.grid{
@@ -65,3 +67,191 @@ table{border-collapse:collapse;border-spacing:0}*/
 /* ==========================================================================
    HEADER
    ========================================================================== */
+
+/* LOGO */
+.logo{
+	height: 220px;
+	float: left;
+	text-indent: -9999px;
+	/*background-color: black;*/
+}
+
+.logo a{
+	display: block;
+	height: 220px;
+	background-color: #ffffff;
+	background: url(../imagens/logo-studio-amilia.png) no-repeat;
+	background-size: 140px 220px;
+}
+
+/* NAV */
+.global{
+	height: 115px;
+	float: right;
+	margin-right: 20px;
+	/*background-color: black;*/
+}
+
+.global li{
+	width: 100px;
+	display: inline-block;
+}
+
+.global a{
+	height: 115px;
+	display: block;
+	background-color: #ffffff;
+	/*text-indent: -9999px;*/
+
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+.global a:hover{
+	background-color: rgba(249, 236, 55, 1);
+}
+
+/* ==========================================================================
+   MAIN
+   ========================================================================== */
+
+#main{
+	margin-top: 80px;
+}
+
+/* ARTICLE */
+.article-main{
+	margin-left: 135px;
+	/*min-height: 240px;*/
+	/*background-color: pink;*/
+}
+
+.features{
+	height: 115px;
+	margin: 70px 0 85px 0;
+	/*background-color: pink;*/
+}
+
+.feature-box{
+	float: left;
+	height: 115px;
+	/*margin-right: 5px;*/
+	/*background-color: green;*/
+}
+
+.img-feature{
+	width: 115px;
+	height: 115px;
+	background-color: rgba(249, 236, 55, 1);
+	float: left;
+}
+
+.info-feature{
+	background-color: #ffffff;
+	height: 115px;
+	float: left;
+	width: 198px;
+	/*width: 178px;*/
+}
+
+h3.titulo-info-feature{
+	margin-top: 40px;
+	margin-left: 20px;
+	padding-right: 20px;
+	color: #000000;
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 1.6em;
+}
+
+p.descricao-info-estrutura{
+	text-align: left;
+	margin-top: 5px;
+	margin-left: 20px;
+	padding-right: 20px;
+}
+
+h1.title-article-main{
+	text-transform: uppercase;
+	font-size: 2.5em;
+	line-height: 1.2em;
+	color: #000000;
+	background-color: rgba(249, 236, 55, 1);
+	padding: 25px;
+	border-top: 2px solid rgba(216, 198, 160, 1);
+}
+
+h1.title-article-main::before{
+	content: "01";
+	color: #000000;
+	position: absolute;
+	background-color: rgba(237, 216, 36, 1);
+	width: 80px;
+	height: 50px;
+	margin: -27px 0 0 -135px;
+	text-align: center;
+	padding-top: 60px;
+	padding-left: 30px;
+	font-size: 1.4em;
+	border-top: 2px solid rgba(216, 198, 160, 1);
+}
+
+p.description-article-main{
+	background-color: #ffffff;
+	font-size: 1em;
+	padding: 26px 20px;
+	color: #000000;
+	line-height: 1.2em;
+}
+
+a.read-more{
+	color: #ffffff;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	background-color: rgba(67, 66, 72, 1);
+	width: 90px;
+	padding-top: 13px;
+	height: 23px;
+	font-size: 1em;
+}
+
+a.read-more::after{
+	content: "⇢";
+	color: #ffffff;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 1.2em;
+	margin-left: 5px;
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.sociais{
+	background-color: rgba(249, 236, 55, 1);
+	float: left;
+	height: 220px;
+	border-left: 160px solid rgba(237, 216, 36, 1);
+}
+
+.nav-rodape{
+	height: 140px;
+	float: right;
+	padding-left: 20px;
+	margin-top: 45px;
+	background: rgba(67, 66, 72, 1);
+}
+
+
+
+
+
+
+
