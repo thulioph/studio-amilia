@@ -30,16 +30,10 @@
 
 	header{
 		height: 220px;
-		/*background: pink;*/
-	}
-
-	#main{
-		/*background: orange;*/
 	}
 
 	footer{
 		height: 220px;
-		/*background: green;*/
 	}
 
 	.grid{
@@ -73,7 +67,6 @@
 	height: 220px;
 	float: left;
 	text-indent: -9999px;
-	/*background-color: black;*/
 }
 
 .logo a{
@@ -89,7 +82,6 @@
 	height: 115px;
 	float: right;
 	margin-right: 20px;
-	/*background-color: black;*/
 }
 
 .global li{
@@ -124,7 +116,6 @@
 .global a:hover{
 	background-color: rgba(249, 236, 55, 1);
 	color: #000000;
-	/*border-right: 1px solid #ffffff;*/
 }
 
 .global a::after {
@@ -233,20 +224,16 @@ a[title="search"]:hover::after {
 /* ARTICLE */
 .article-main{
 	margin-left: 135px;
-	/*min-height: 240px;*/
-	/*background-color: pink;*/
 }
 
 .features{
 	height: 115px;
 	margin: 70px 0 85px 0;
-	/*background-color: pink;*/
 }
 
 .feature-box{
 	float: left;
 	height: 115px;
-	/*background-color: green;*/
 }
 
 .img-feature{
@@ -310,7 +297,6 @@ a[title="search"]:hover::after {
 	height: 115px;
 	float: left;
 	width: 198px;
-	/*width: 178px;*/
 }
 
 h3.titulo-info-feature{
@@ -457,15 +443,6 @@ a[title="Google"] {
 a[title="Flickr"] {
 	background-position: -94px 2px;
 }
-/*.sociais-rodape a::before {
-	content: "";
-	width: 10px;
-	height: 10px;
-	background: url(../imagens/sprite-social.png) no-repeat;
-	position: absolute;
-	display: inline-block;
-	margin: 11px;
-}*/
 
 .nav-rodape{
 	height: 140px;
@@ -480,7 +457,6 @@ a[title="Flickr"] {
 	height: 160px;
 	margin: -20px 0 0 60px;
 	float: left;
-	/*background-color: red;*/
 }
 
 h3.titulo-nav-rodape {
