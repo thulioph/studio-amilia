@@ -95,13 +95,20 @@
 .global li{
 	width: 100px;
 	display: inline-block;
+	margin-left: -3px;
 }
 
 .global a{
-	height: 115px;
+	text-align: right;
+	border-right: 1px solid rgb(198,198,198);
+	padding-top: 90px;
+	padding-right: 15px;
+	height: 25px;
 	display: block;
 	background-color: #ffffff;
-	/*text-indent: -9999px;*/
+	text-transform: uppercase;
+	text-decoration: none;
+	color: rgb(198,198,198);
 
 	-webkit-transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
@@ -110,8 +117,109 @@
 	transition: all 0.2s linear;
 }
 
+.global li:last-child a {
+	border-right: none;
+}
+
 .global a:hover{
 	background-color: rgba(249, 236, 55, 1);
+	color: #000000;
+	/*border-right: 1px solid #ffffff;*/
+}
+
+.global a::after {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	background: url(../imagens/sprite-icons-menu.png);
+	width: 52px;
+	height: 52px;
+	overflow: hidden;
+	margin: -62px 0px 0 -60px;
+
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+/*home*/
+a[title="home"]::after {
+	content: "";
+	background-position: 0 1px;
+}
+
+a[title="home"]:hover::after {
+	content: "";
+	background-position: 0 49px;
+}
+
+/*features*/
+a[title="features"]::after {
+	content: "";
+	background-position: -47px 2px;
+	width: 49px;
+}
+
+a[title="features"]:hover::after {
+	content: "";
+	background-position: -47px 49px;
+	width: 49px;
+}
+
+/*portfólio*/
+a[title="portfolio"]::after {
+	content: "";
+	background-position: -95px 2px;
+	width: 49px;
+}
+
+a[title="portfolio"]:hover::after {
+	content: "";
+	background-position: -95px 49px;
+	width: 49px;
+}
+
+/*blog*/
+a[title="blog"]::after {
+	content: "";
+	background-position: -145px 0px;
+	width: 49px;
+	height: 50px;
+}
+
+a[title="blog"]:hover::after {
+	content: "";
+	background-position: -145px 48px;
+	width: 49px;
+	height: 50px;
+}
+
+/*contact*/
+a[title="contact"]::after {
+	content: "";
+	background-position: -190px 2px;
+	width: 49px;
+}
+
+a[title="contact"]:hover::after {
+	content: "";
+	background-position: -190px 49px;
+	width: 49px;
+}
+
+/*search*/
+a[title="search"]::after {
+	content: "";
+	background-position: -239px 2px;
+	width: 49px;
+}
+
+a[title="search"]:hover::after {
+	content: "";
+	background-position: -239px 49px;
+	width: 49px;
 }
 
 /* ==========================================================================
@@ -138,15 +246,63 @@
 .feature-box{
 	float: left;
 	height: 115px;
-	/*margin-right: 5px;*/
 	/*background-color: green;*/
 }
 
 .img-feature{
 	width: 115px;
 	height: 115px;
-	background-color: rgba(249, 236, 55, 1);
+	background: rgba(249, 236, 55, 1);
 	float: left;
+}
+
+.img-feature::after {
+	content: "";
+	background: url(../imagens/sprite-icons-menu.png) no-repeat;
+	width: 49px;
+	height: 49px;
+	position: absolute;
+	display: inline-block;
+	margin: 33px;
+
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+/*fully responsive*/
+.img-feature[data-name="img-responsive"]::after {
+	content: "";
+	background-position: -287px 0;
+}
+
+.img-feature[data-name="img-responsive"]:hover::after {
+	content: "";
+	background-position: -287px -48px;
+}
+
+/*easy to customize*/
+.img-feature[data-name="img-customize"]::after {
+	content: "";
+	background-position: -336px 0;
+}
+
+.img-feature[data-name="img-customize"]:hover::after {
+	content: "";
+	background-position: -336px -48px;
+}
+
+/*retina ready*/
+.img-feature[data-name="img-retina"]::after {
+	content: "";
+	background-position: -386px 0;
+}
+
+.img-feature[data-name="img-retina"]:hover::after {
+	content: "";
+	background-position: -386px -48px;
 }
 
 .info-feature{
@@ -241,6 +397,76 @@ a.read-more::after{
 	border-left: 160px solid rgba(237, 216, 36, 1);
 }
 
+h2.titulo-footer {
+	text-transform: uppercase;
+	font-size: 2.5em;
+	line-height: 1.2em;
+	color: #000000;
+	background-color: rgba(249, 236, 55, 1);
+	padding: 40px 0 35px 35px;
+}
+
+p.subtitulo-footer {
+	text-transform: uppercase;
+	color: #000000;
+	padding: 0 50px 30px 35px;
+	font-size: 1.2em;
+	line-height: 1.2em;
+}
+
+.sociais-rodape li {
+	display: inline-block;
+	margin-right: 2px;
+}
+
+.sociais-rodape li:first-child {
+	margin-left: 35px;
+}
+
+.sociais-rodape a {
+	display: block;
+	width: 37px;
+	height: 37px;
+	border-radius: 100%;
+	text-align: center;
+	border: 1px solid #000000;
+	text-indent: -99999px;
+	background: url(../imagens/sprite-social.png) no-repeat;
+}
+
+.sociais-rodape a:hover {
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	transform: rotate(10deg);
+}
+
+a[title="Facebook"] {
+	background-position: 4px 4px;
+}
+
+a[title="Twitter"] {
+	background-position: -28px 4px;
+}
+
+a[title="Google"] {
+	background-position: -60px 3px;
+}
+
+a[title="Flickr"] {
+	background-position: -94px 2px;
+}
+/*.sociais-rodape a::before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	background: url(../imagens/sprite-social.png) no-repeat;
+	position: absolute;
+	display: inline-block;
+	margin: 11px;
+}*/
+
 .nav-rodape{
 	height: 140px;
 	float: right;
@@ -249,9 +475,97 @@ a.read-more::after{
 	background: rgba(67, 66, 72, 1);
 }
 
+.nav-rodape aside {
+	width: 160px;
+	height: 160px;
+	margin: -20px 0 0 60px;
+	float: left;
+	/*background-color: red;*/
+}
 
+h3.titulo-nav-rodape {
+	text-transform: uppercase;
+	color: #000000;
+	text-align: center;
+	display: block;
+	background: rgba(249, 236, 55, 1);
+	padding: 15px;
+	font-size: 1.8em;
+	margin-bottom: 15px;
+}
 
+.list-latest-posts li {
+	width: 100px;
+	height: 20px;
+	margin: 0 auto 12px 50px;
+}
 
+.list-latest-posts a {
+	display: block;
+	height: 20px;
+	width: 100px;
+	text-decoration: none;
+}
 
+.list-latest-posts a:hover h4{
+	color: #000000;
+}
 
+.list-latest-posts li::before {
+	content: "";
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	margin-left: -25px;
+	position: absolute;
+	background: url(../imagens/sprite-icons-footer.png) no-repeat;
+}
+
+li[data-name="pencil"]::before {
+	content: "";
+	background-position: 2px 0;
+}
+
+li[data-name="paper"]::before {
+	content: "";
+	background-position: -16px 2px;
+	width: 17px;
+}
+
+li[data-name="movie"]::before {
+	content: "";
+	background-position: -31px 2px;
+}
+
+.title-thumb-post {
+	text-transform: uppercase;
+	color: #ffffff;
+	margin-bottom: 2px;
+}
+
+.date-thumb-post {
+	color: #cccccc;
+	font-size: 0.8em;
+}
+
+li[data-name="address"]::before {
+	content: "";
+	background-position: -48px 0;
+	width: 18px;
+}
+
+li[data-name="telephone"]::before {
+	content: "";
+	background-position: -63px 2px;
+	width: 17px;
+}
+
+li[data-name="email"]::before {
+	content: "";
+	background-position: -79px 2px;
+}
+
+li[data-name="email"] h4 {
+	padding-top: 5px;
+}
 
